@@ -36,7 +36,7 @@ def add_contact():
     
         #Adding New Contact Record to List
         contacts.append(new_contact)
-        print(f"New Contact with Unique ID: {unique_contact_id} with name: {contact_name} and {mobile_number} Added Successfully.")
+        print(f"New Contact with Unique ID: {contact_id} with name: {contact_name} and {phone_number} Added Successfully.")
         
         
 
@@ -50,12 +50,12 @@ def view_contacts():
 
 
 def update_contact():
-    unique_contact_id = input("Enter the Unique Contact ID you want to update:\n")
+    contact_id = input("Enter the Unique Contact ID you want to update:\n")
     for contact in contacts:
-        if contact["ID"] != unique_contact_id:
-            print(f"The Contact with Unique Contact ID: {unique_contact_id} not found")
+        if contact["ID"] != contact_id:
+            print(f"The Contact with Unique Contact ID: {contact_id} not found")
             break
-        elif contact["ID"] == unique_contact_id:
+        elif contact["ID"] == contact_id:
             print("Current Contact Details\n")
             print(f"ID:{contact['ID']}\nName: {contact['Name']}\nMobile Number: {contact['Mobile Number']}\nPhone Number: {contact['Phone Number']}\nEmail: {contact['Email']}\nWebsite: {contact['Website']}\nHome Address: {contact['Home Address']}\nWork Address: {contact['Work Address']}\nDate of Birth: {contact['Date of Birth']}\nNote: {contact['Note']}\n")
             
@@ -69,7 +69,7 @@ def update_contact():
         work_address = input("Enter contact's work address (Press enter to keep the current value): \n")
         dob = input("Enter contact's date of birth(dd/mm/year) (Press enter to keep the current value): \n")
         note = input("Enter a note about the contact (Press enter to keep the current value): \n")
-        print(f"The contact with Unique Contact ID: {unique_contact_id} Updated Successfully.")
+        print(f"The contact with Unique Contact ID: {contact_id} Updated Successfully.")
         
         #get updated value
         if contact_name:
@@ -94,14 +94,14 @@ def update_contact():
     
 
 def delete_contact():
-    unique_contact_id = input("Enter the Unique Contact ID of the contact you want to delete: ")
+    contact_id = input("Enter the Contact ID of the contact you want to delete: ")
     for contact in contacts:
-        if contact["ID"] == unique_contact_id:
+        if contact["ID"] == contact_id:
             contacts.remove(contact)
-            print(f"The contact with Contact ID: {unique_contact_id} deleted successfully")
+            print(f"The contact with Contact ID: {contact_id} deleted successfully")
             break
         else:
-            print(f"The contact with Unique Contact ID: {unique_contact_id} not found in contacts.")
+            print(f"The contact with Unique Contact ID: {contact_id} not found in contacts.")
 
 def exit_program():
     exit(1)
