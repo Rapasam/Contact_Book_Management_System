@@ -101,7 +101,7 @@ def delete_contact():
             print(f"The contact with Contact ID: {contact_id} deleted successfully")
             break
         else:
-            print(f"The contact with Unique Contact ID: {contact_id} not found in contacts.")
+            print(f"The contact with Contact ID: {contact_id} not found in contacts.")
 
 def exit_program():
     exit(1)
