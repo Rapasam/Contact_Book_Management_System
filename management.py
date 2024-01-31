@@ -46,7 +46,7 @@ def view_contacts():
     else:
         print("\nContacts List!!!")
         for contact in contacts:
-            print(f"ID:{contact['ID']}\nName: {contact['Name']}\nMobile Number: {contact['Mobile Number']}\nPhone Number: {contact['Phone Number']}\nEmail: {contact['Email']}\nWebsite: {contact['Website']}\nHome Address: {contact['Home Address']}\nWork Address: {contact['Work Address']}\nDate of Birth: {contact['Date of Birth']}\nNote: {contact['Note']}\n")
+            print(f"ID:{contact['ID']}\nName: {contact['Name']}\nPhone Number: {contact['Phone Number']}\nEmail: {contact['Email']}\nWebsite: {contact['Website']}\nHome Address: {contact['Home Address']}\nWork Address: {contact['Work Address']}\nDate of Birth: {contact['Date of Birth']}\nNote: {contact['Note']}\n")
 
 
 def update_contact():
@@ -57,11 +57,10 @@ def update_contact():
             break
         elif contact["ID"] == contact_id:
             print("Current Contact Details\n")
-            print(f"ID:{contact['ID']}\nName: {contact['Name']}\nMobile Number: {contact['Mobile Number']}\nPhone Number: {contact['Phone Number']}\nEmail: {contact['Email']}\nWebsite: {contact['Website']}\nHome Address: {contact['Home Address']}\nWork Address: {contact['Work Address']}\nDate of Birth: {contact['Date of Birth']}\nNote: {contact['Note']}\n")
+            print(f"ID:{contact['ID']}\nName: {contact['Name']}\nPhone Number: {contact['Phone Number']}\nEmail: {contact['Email']}\nWebsite: {contact['Website']}\nHome Address: {contact['Home Address']}\nWork Address: {contact['Work Address']}\nDate of Birth: {contact['Date of Birth']}\nNote: {contact['Note']}\n")
             
         #Update Information 
         contact_name = input("Enter contact's name (Press enter to keep the current value): \n")
-        mobile_number = input("Enter contact's mobile number (Press enter to keep the current value): \n")
         phone_number = input("Enter contact's phone number (Press enter to keep the current value): \n")
         email = input("Enter contact's email (Press enter to keep the current value): \n")
         website = input("Enter contact's website (Press enter to keep the current value)e: \n")
@@ -74,8 +73,6 @@ def update_contact():
         #get updated value
         if contact_name:
             contact['Name'] = contact_name
-        if mobile_number:
-            contact['Home Mobile Number'] = mobile_number
         if phone_number:
             contact['Work Phone Number'] = phone_number
         if email:
